@@ -34,7 +34,7 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .font(.title)
                     .padding()
-                    .background(Color(UIColor.systemBlue))
+                    .background(Color(UIColor.systemGray))
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
