@@ -11,34 +11,38 @@ struct ContentView: View {
     @State private var ColorsActive = [true, false, false]
     
     var body: some View {
-        VStack {
-            ZStack {
-                Color(.secondarySystemFill)
-                    .frame(width: 200, height: 500)
-                    .cornerRadius(10)
-                VStack {
-                    CircleView(color: .systemRed, isActive:
-                                ColorsActive[0])
-                    CircleView(color: .systemYellow, isActive:
-                                ColorsActive[1])
-                    CircleView(color: .systemGreen, isActive:
-                                ColorsActive[2])
+        ZStack {
+            Color.black
+            
+            VStack {
+                ZStack {
+                    Color(.secondarySystemFill)
+                        .frame(width: 200, height: 500)
+                        .cornerRadius(10)
+                    VStack {
+                        CircleView(color: .systemRed, isActive:
+                                    ColorsActive[0])
+                        CircleView(color: .systemYellow, isActive:
+                                    ColorsActive[1])
+                        CircleView(color: .systemGreen, isActive:
+                                    ColorsActive[2])
+                    }
                 }
+                .padding()
+                
+                Spacer()
+                
+                Button(action: { self.changeActiveColor() }) {
+                    Text("Next Color")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding()
+                        .background(Color(UIColor.systemGray))
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
             }
-            .padding()
-            
-            Spacer()
-            
-            Button(action: { self.changeActiveColor() }) {
-                Text("Next Color")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .padding()
-                    .background(Color(UIColor.systemGray))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding()
         }
     }
     
@@ -59,8 +63,5 @@ struct ContentView: View {
 }
     
 #Preview {
-    ZStack {
-        Color.black
-        ContentView()
-    }
+    ContentView()
 }
