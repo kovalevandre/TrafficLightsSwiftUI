@@ -14,7 +14,7 @@ struct CircleView: View {
     var body: some View {
         ZStack {
             Color(color)
-                .frame(width: 150, height: 150)
+                .frame(width: 150)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 .opacity(isActive ? 1.0 : 0.1)
                 .overlay(Circle()

@@ -13,7 +13,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color.black
-            
             VStack {
                 ZStack {
                     Color(.secondarySystemFill)
