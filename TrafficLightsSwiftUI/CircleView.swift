@@ -24,12 +24,6 @@ struct CircleView: View {
     }
 }
 
-struct CircleView_Previews: PreviewProvider {
-    static var previews: some View {
-        CircleView(color: .red, isActive: true)
-    }
-}
-
 #Preview {
     ZStack {
         Color.green
